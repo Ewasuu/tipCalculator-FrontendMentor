@@ -1,0 +1,206 @@
+/* Basic css */
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    /* Fonts */
+    font-family: 'Space Mono', monospace;
+
+    /*Colors*/
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --dark-grayish-lighter-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --light-lighter-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    --hover-state: hsl(185, 75%, 81%);
+}
+/* Layout */
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-color: var(--light-grayish-cyan);
+    height: 100%;
+    width: 100%;
+    
+}
+main{
+    height: 100%;
+}
+.splitter{
+    font-size: 1.2rem;
+    margin: 1rem;
+    letter-spacing: 10px;
+    color: var(--dark-grayish-cyan);
+    text-align: center;
+}
+.splitter-container{
+    height: 20%;
+    margin: 0;
+}
+.container{
+    background-color: var(--White);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.container-row{
+    width: 90%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+label{
+    display: inline-block;
+    font-size: .8rem;
+    color: var(--dark-grayish-cyan);
+    font-weight: 700;
+}
+.label-container{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+input{
+    width: 90%;
+    height: 30px;
+    margin-right: 5px;
+
+    background-color: var(--light-lighter-grayish-cyan);
+    outline: var(--light-grayish-cyan);
+    color: var(--very-dark-cyan);
+    border: none;
+    
+
+    text-align: end;
+    font-size: 1.5rem;
+    font-weight: 700;
+    
+}
+
+.input-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-lighter-grayish-cyan);
+}
+.focuseado{
+    border: var(--light-grayish-cyan) 1px solid;
+} 
+.icon{
+    display: inline-block;
+    width: 10%;
+    font-family: FontAwesome;
+    color: var(--dark-grayish-lighter-cyan);
+    font-weight: 500;
+    text-align: start;
+    font-size: 1rem;
+    margin-top: .6rem;
+    margin-left: 1rem;
+}
+.tips{
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(2,100px);
+    gap: .5em;
+    place-content: center;
+}
+button{
+    background-color: var(--very-dark-cyan);
+    color: var(--White);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: .5rem 0;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition-duration: .6s;
+}
+button:nth-child(6){
+    background-color: var(--light-lighter-grayish-cyan);
+    color: var(--very-dark-cyan);
+    transition-duration: 0s;
+}
+button:nth-child(6):hover{
+    background-color: var(--light-lighter-grayish-cyan);
+    border: var(--hover-state) 2px solid;
+}
+.tip-container{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--very-dark-cyan);
+    border-radius: 20px;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 60px 60px;
+    
+}
+h3{
+    color: var(--White);
+    font-size: .8rem;
+    font-weight: 500;
+}
+p{
+    color: var(--light-grayish-cyan);
+    font-size: .6rem;
+    font-weight: 100;
+}
+h2{
+    color: var(--Strong-cyan);
+    text-align: end;
+}
+.tip-container button{
+    color: var(--very-dark-cyan);
+    width: 100%;
+    grid-column: span 2;
+    margin: 1rem 0;
+    padding: .8rem 0;
+}
+
+.activated:hover,
+.activated:focus,
+form button:hover{
+    background-color: var(--hover-state);
+}
+form button:hover{
+    color: var(--very-dark-cyan);
+}
+/* validate */
+.disabled{
+    background-color: rgba(255, 255, 255, 0.138);
+    cursor: not-allowed;
+}
+.activated{
+    background-color: var(--Strong-cyan);
+    cursor: pointer;
+}
+.one{
+    display: none;
+}
+.zero-input{
+    border: 1px solid rgb(255, 0, 0);
+}
+.zero-label{
+    display: inline-block;
+    color: rgb(255, 0, 0);
+}
+/* FrontEnd Mentor data */
+.attribution {
+    font-size: 11px; text-align: center; 
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
